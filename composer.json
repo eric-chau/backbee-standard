@@ -17,32 +17,18 @@
         "backbee/demo-bundle": "1.0.*@dev",
         "backbee/toolbar-bundle": "1.0.*@dev",
         "backbee/bb-core-js": "1.0.*@dev",
-        "twig/extensions": "1.1.0"
+        "twig/extensions": "1.1.0",
+        "webmozart/console": "~1.0@beta"
     },
     "autoload": {
         "psr-4": {
-            "BackBee\\Standard\\": ""
+            "BackBee\\Standard\\": "",
+            "BackBee\\Installer\\": "installer/"
         }
     },
     "scripts": {
-        "post-install-cmd": [
-            "BackBee\\Standard\\Composer\\ScriptHandler::buildParameters",
-            "BackBee\\Standard\\Composer\\ScriptHandler::buildBackBeeStructure",
-            "BackBee\\Standard\\Composer\\ScriptHandler::buildBootstrap",
-            "BackBee\\Standard\\Composer\\ScriptHandler::buildDoctrineConfig",
-            "BackBee\\Standard\\Composer\\ScriptHandler::buildServicesConfig",
-            "BackBee\\Standard\\Composer\\ScriptHandler::clearBackBeeInstall",
-            "BackBee\\Standard\\Composer\\ScriptHandler::moveClient"
-        ],
-        "post-update-cmd": [
-            "BackBee\\Standard\\Composer\\ScriptHandler::buildParameters",
-            "BackBee\\Standard\\Composer\\ScriptHandler::buildBackBeeStructure",
-            "BackBee\\Standard\\Composer\\ScriptHandler::buildBootstrap",
-            "BackBee\\Standard\\Composer\\ScriptHandler::buildDoctrineConfig",
-            "BackBee\\Standard\\Composer\\ScriptHandler::buildServicesConfig",
-            "BackBee\\Standard\\Composer\\ScriptHandler::clearBackBeeInstall",
-            "BackBee\\Standard\\Composer\\ScriptHandler::moveClient"
-        ]
+        "post-install-cmd": [],
+        "post-update-cmd": []
     },
     "extra": {
         "prompt": true,
